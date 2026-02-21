@@ -75,253 +75,229 @@ a = np.array([10, 20, 30, 40])
 2D Array:
 
 b = np.array([[1,2,3],[4,5,6]])
-#6️⃣ DIMENSIONS AND SHAPE
-ndim
 
-Used to determine the number of dimensions of an array.
+- To learn how to create and manipulate arrays.
+- To study dimensions and shapes of arrays.
+- To perform mathematical and statistical operations.
+- To understand NumPy as the foundation of Pandas and other data science tools.
 
-1D array → ndim = 1
+---
 
-2D array → ndim = 2
+# 3️⃣ INTRODUCTION TO NUMPY
 
-3D array → ndim = 3
+NumPy (Numerical Python) is a powerful Python library used for numerical and scientific computing.
 
-shape
+It provides high-performance multidimensional arrays and a large collection of mathematical functions to operate on these arrays efficiently.
 
-Returns a tuple representing the dimensions of the array.
+NumPy is implemented in C, which makes it significantly faster than normal Python lists for numerical operations.
 
-Example:
+It is considered the backbone of the Python data science ecosystem and serves as the foundation for libraries such as Pandas, SciPy, Matplotlib, and Scikit-learn.
 
-(4,) → 4 elements in 1D
+---
 
-(2,3) → 2 rows and 3 columns
+# 4️⃣ WHY NUMPY?
 
-Understanding shape is important in:
+NumPy is widely used because:
 
-Matrix operations
+- It performs mathematical operations efficiently.
+- It supports multi-dimensional arrays.
+- It enables vectorized computation without explicit loops.
+- It consumes less memory compared to Python lists.
+- It provides built-in statistical and linear algebra functions.
 
-Machine learning models
+In Exploratory Data Analysis (EDA), NumPy helps in:
 
-Data reshaping
+- Statistical calculations
+- Data transformation
+- Numerical modeling
+- Feature scaling
+- Matrix computations
 
-7️⃣ DATA TYPES IN NUMPY
+---
+
+# 5️⃣ NUMPY ARRAY
+
+A NumPy array is a grid of values of the same data type.
+
+Arrays can be:
+
+- One-dimensional (1D)
+- Two-dimensional (2D)
+- Multi-dimensional (3D and above)
+
+Unlike Python lists, NumPy arrays are homogeneous, meaning all elements must be of the same data type.
+
+---
+
+# 6️⃣ DIMENSIONS AND SHAPE
+
+Dimension refers to the number of axes in an array.
+
+- A 1D array has one axis.
+- A 2D array has two axes (rows and columns).
+- A 3D array has three axes.
+
+Shape refers to the structure of the array in terms of rows and columns.
+
+For example:
+- A 1D array with 4 elements has shape (4,)
+- A 2D array with 2 rows and 3 columns has shape (2, 3)
+
+Understanding dimensions and shape is important in matrix operations, reshaping data, and machine learning algorithms.
+
+---
+
+# 7️⃣ DATA TYPES IN NUMPY
 
 Each NumPy array has a fixed data type.
 
-Use:
+Common data types include:
 
-a.dtype
+- int32
+- int64
+- float32
+- float64
 
-Common types:
+Because NumPy arrays are homogeneous, they are more memory efficient than Python lists.
 
-int32
+---
 
-int64
+# 8️⃣ ARRAY CREATION FUNCTIONS
 
-float32
+NumPy provides built-in functions to create arrays such as:
 
-float64
+- Zeros array (all elements are 0)
+- Ones array (all elements are 1)
+- Identity matrix (diagonal elements are 1)
 
-NumPy arrays are homogeneous (all elements must be same type).
+These functions are widely used in mathematical modeling and matrix operations.
 
-8️⃣ ARRAY CREATION FUNCTIONS
-np.zeros()
+---
 
-Creates an array filled with zeros.
+# 9️⃣ SEQUENCE GENERATION FUNCTIONS
 
-Example:
+NumPy provides methods to generate numerical sequences such as:
 
-np.zeros((2,3))
-np.ones()
+- Generating numbers within a specified range
+- Generating evenly spaced numbers between two limits
 
-Creates an array filled with ones.
+These are commonly used in plotting graphs and numerical simulations.
 
-Example:
+---
 
-np.ones((3,3))
-np.eye()
+# 🔟 VECTOR OPERATIONS
 
-Creates an identity matrix.
+One of the most powerful features of NumPy is vectorization.
 
-Identity matrix:
+Vectorized operations allow element-wise computation without writing explicit loops.
 
-Diagonal elements = 1
+This results in:
 
-Others = 0
+- Faster execution
+- Cleaner syntax
+- Efficient memory usage
 
-Example:
+---
 
-np.eye(3)
+# 1️⃣1️⃣ STATISTICAL FUNCTIONS
 
-Used in:
+NumPy provides built-in statistical functions such as:
 
-Linear algebra
+- Mean (average)
+- Median
+- Maximum value
+- Minimum value
+- Sum of elements
 
-Matrix multiplication
+These functions are essential in:
 
-Machine learning
+- Data analysis
+- EDA reports
+- Data preprocessing
+- Statistical summaries
 
-9️⃣ SEQUENCE GENERATION FUNCTIONS
-np.arange()
+---
 
-Generates numbers within a range.
+# 1️⃣2️⃣ NUMPY IN EDA
 
-Syntax:
+In Exploratory Data Analysis, NumPy is used for:
 
-np.arange(start, stop, step)
+- Computing descriptive statistics
+- Handling numerical datasets
+- Data transformation
+- Normalization
+- Preparing features for machine learning models
 
-Example:
+NumPy works together with Pandas for structured data analysis and is essential for data science workflows.
 
-np.arange(1,10,2)
-np.linspace()
+---
 
-Generates evenly spaced numbers between two limits.
+# 1️⃣3️⃣ ADVANTAGES OF NUMPY
 
-Syntax:
+- High performance
+- Memory efficient
+- Faster than Python lists
+- Supports broadcasting
+- Core library for data science
 
-np.linspace(start, stop, number_of_values)
+---
 
-Example:
+# 1️⃣4️⃣ LIMITATIONS OF NUMPY
 
-np.linspace(0,1,5)
+- Not suitable for labeled data (Pandas is preferred)
+- Arrays must be homogeneous
+- Less flexible compared to Python lists
 
-Used in:
+---
 
-Graph plotting
+# 1️⃣5️⃣ REAL-WORLD APPLICATIONS
 
-Numerical simulations
+NumPy is widely used in:
 
-Data sampling
+- Data Science
+- Machine Learning
+- Artificial Intelligence
+- Financial Analysis
+- Engineering Simulations
+- Scientific Research
 
-🔟 VECTOR OPERATIONS
+---
 
-NumPy supports element-wise operations.
+# 1️⃣6️⃣ CONCLUSION
 
-Example:
+In this experiment, we studied the NumPy library and its role in numerical computation and Exploratory Data Analysis.
 
-c = a * 2
-d = a + 5
+We learned about:
 
-These operations are called vectorized operations.
+- NumPy arrays
+- Dimensions and shapes
+- Data types
+- Array creation methods
+- Sequence generation
+- Vectorized operations
+- Statistical functions
 
-Advantages:
+NumPy forms the foundation of modern data analysis and is essential for advanced topics such as machine learning and artificial intelligence.
+---
 
-Faster than loops
+## 🧰 Development Setup
 
-Cleaner syntax
+- **Language:** Python  
+- **Execution Environment:** Google Colab  
+- **Mode:** Online execution (No local installation required)
 
-Efficient computation
+---
 
-1️⃣1️⃣ STATISTICAL FUNCTIONS
+## ▶ Usage Instructions
 
-NumPy provides built-in statistical functions:
+1. Open the Python file or notebook from this repository  
+2. Run the program in **Google Colab**  
+3. Execute the cells step by step  
+4. Observe the output and error messages  
+5. Modify values to explore tuple behavior  
 
-np.mean()
+---
 
-Returns average value.
-
-np.median()
-
-Returns middle value.
-
-np.max()
-
-Returns maximum value.
-
-np.min()
-
-Returns minimum value.
-
-np.sum()
-
-Returns sum of elements.
-
-These functions are widely used in:
-
-Data analysis
-
-Descriptive statistics
-
-Data preprocessing
-
-EDA reports
-
-1️⃣2️⃣ NUMPY IN EDA
-
-In Exploratory Data Analysis, NumPy helps in:
-
-Calculating summary statistics
-
-Handling numerical datasets
-
-Performing transformations
-
-Normalizing data
-
-Feature scaling
-
-Matrix operations for ML algorithms
-
-NumPy works together with Pandas for structured data analysis.
-
-1️⃣3️⃣ ADVANTAGES OF NUMPY
-
-High performance
-
-Memory efficient
-
-Easy mathematical computation
-
-Supports broadcasting
-
-Integrates with other libraries
-
-Foundation for machine learning
-
-1️⃣4️⃣ LIMITATIONS OF NUMPY
-
-Not ideal for labeled data (Pandas is better)
-
-Arrays must be homogeneous
-
-Less flexible than Python lists
-
-1️⃣5️⃣ REAL-WORLD APPLICATIONS
-
-Data Science
-
-Machine Learning
-
-Artificial Intelligence
-
-Financial Analysis
-
-Signal Processing
-
-Engineering Simulations
-
-Computer Graphics
-
-1️⃣6️⃣ CONCLUSION
-
-In this experiment, we studied:
-
-NumPy arrays and their structure
-
-Dimensions and shape of arrays
-
-Array creation methods
-
-Sequence generation functions
-
-Vectorized operations
-
-Statistical functions
-
-NumPy serves as the backbone of data science and EDA processes.
-Understanding NumPy is essential before moving to Pandas, Matplotlib, and Machine Learning.
-
-This experiment builds the mathematical foundation required for advanced data analysis.
 ## 👤 Author
 
 **Dev Anand**  
