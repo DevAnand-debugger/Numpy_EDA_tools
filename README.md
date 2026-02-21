@@ -75,7 +75,7 @@ a = np.array([10, 20, 30, 40])
 2D Array:
 
 b = np.array([[1,2,3],[4,5,6]])
-6️⃣ DIMENSIONS AND SHAPE
+#6️⃣ DIMENSIONS AND SHAPE
 ndim
 
 Used to determine the number of dimensions of an array.
